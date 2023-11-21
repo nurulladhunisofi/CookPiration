@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+.bg-cream{
+  background-color: #FDF2E9;
+}
+.bg-putih{
+  background-color: white;
+}
+.text-oranye{
+  color: #E98649;
+}
+.bg-oranye{
+  background-color: #E98649 !important;
+}
+.icon-login{
+  width: 28px;
+}
+.garis-hitam{
+  height:2px;
+  border-width:0;
+  color:black;
+  background-color:black;
+}
+.kartu-login{
+  border-right: 5px solid #333333;
+  border-bottom: 5px solid #333333;
+}
+/* components>navbar sebelum login */
+.nav-cari{
+  border-radius: 80px !important;
+  font-size: 36px;
+}
+.btn-login{
+  border-radius: 40px !important;
+}
