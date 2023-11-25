@@ -65,12 +65,12 @@ const Login = () => {
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Col className="ms-auto" md={3}>
-                                    <Button type="submit" variant="outline-warning" className="text-light" style={{backgroundColor: '#E98649'}}>Masuk</Button>
+                                    <Button href="halamanUtamaSesudahLogin" type="submit" variant="outline-warning" className="text-light" style={{backgroundColor: '#E98649'}}>Masuk</Button>
                                 </Col>
                             </Form.Group>
                         </Form>
                         <hr className="garis-hitam" />
-                        <p className="text-center">Tidak punya akun? <a className="fw-bold text-dark" href="">Daftar</a></p>
+                        <p className="text-center">Tidak punya akun? <a className="fw-bold text-dark" href="register">Daftar</a></p>
                     </Col>
                 </Col>
                 <Col className="bg-login rounded p-0" md={6}>

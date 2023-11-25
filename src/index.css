@@ -6,7 +6,7 @@
   background-color: #FDF2E9;
 }
 .bg-putih{
-  background-color: white;
+  background-color: white !important;
 }
 .text-oranye{
   color: #E98649;

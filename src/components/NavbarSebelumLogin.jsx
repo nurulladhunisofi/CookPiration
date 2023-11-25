@@ -20,7 +20,7 @@ const NavbarSebelumLogin = (props) => {
             </Form>
             <Nav className="m-auto">
                 <Nav.Link className="fw-bold me-4" href="">Beranda</Nav.Link>
-                <Nav.Link className="fw-bold me-4" href="#link">Resep</Nav.Link>
+                <Nav.Link className="fw-bold me-4" href="halamanResep">Resep</Nav.Link>
                 <Nav.Link className="fw-bold me-4" href="#link">Artikel</Nav.Link>
             </Nav>
             <Nav className="ms-auto">
