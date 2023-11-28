@@ -26,9 +26,9 @@ const NavbarSesudahLogin = () => {
                 <Form.Control className="nav-cari bg-light" type="seacrh" placeholder="Mau Makan Apa Hari Ini?" />
             </Form>
             <Nav className="m-auto">
-                <Nav.Link className="fw-bold me-4" href="">Beranda</Nav.Link>
+                <Nav.Link className="fw-bold me-4" href="HalamanUtamaSesudahLogin">Beranda</Nav.Link>
                 <Nav.Link className="fw-bold me-4" href="halamanResep">Resep</Nav.Link>
-                <Nav.Link className="fw-bold me-4" href="#link">Artikel</Nav.Link>
+                <Nav.Link className="fw-bold me-4" href="halamanArtikel">Artikel</Nav.Link>
             </Nav>
             <Nav className="ms-auto">
                 <NavDropdown id="nav-dropdown-dark-example"

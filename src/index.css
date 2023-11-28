@@ -2,14 +2,18 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+.link-pindah-kedetail{
+  color: black;
+  text-decoration: none;
+}
 .bg-cream{
-  background-color: #FDF2E9;
+  background-color: #FDF2E9 !important;
 }
 .bg-putih{
   background-color: white !important;
 }
 .text-oranye{
-  color: #E98649;
+  color: #E98649 !important;
 }
 .bg-oranye{
   background-color: #E98649 !important;
@@ -34,4 +38,31 @@
 }
 .btn-login{
   border-radius: 40px !important;
+}
+/* pagination */
+.page-item .page-link {
+  z-index: 3;
+  color: #E98649 !important;
+  background-color: #ffffff !important;
+  border: solid #E98649;
+  margin: 3px;
+}
+.page-item .page-link:hover {
+  color: #E98649 !important;
+  background-color: rgb(202, 201, 201) !important;
+  border: solid #E98649;
+  font-weight: bold;
+}
+.page-item.active .page-link{
+  border: solid orange;
+  color: white !important;
+  background-color: #E98649 !important;
+}
+.page-link{
+  border-radius: 100px;
+}
+/* card-artikel */
+.card-text-scroll{
+  height: 80px;
+  overflow: scroll;
 }

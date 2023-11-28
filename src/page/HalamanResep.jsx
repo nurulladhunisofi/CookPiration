@@ -1,6 +1,8 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import NavbarSesudahLogin from '../components/NavbarSesudahLogin'
 import Footer from '../components/Footer'
+import Paginasi from '../components/Paginasi';
 import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -8,49 +10,46 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Stack from 'react-bootstrap/Stack';
-import Pagination from 'react-bootstrap/Pagination';
-//font awesome
+// font awesome
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faBookmark, faClock, faUtensils, faHeart, faStar, faEye } from '@fortawesome/free-solid-svg-icons'
+import HalamanDetailResep from './HalamanDetailResep';
 const HalamanResep = () => {
-  let active = 2;
-  let items = [];
-  for (let number = 1; number <= 5; number++) {
-    items.push(
-      <Pagination.Item key={number} active={number === active}>
-        {number}
-      </Pagination.Item>,
-    );
-  }
   return (
     <div>
       <NavbarSesudahLogin/>
       <Container>
-        <Row className="mb-4 mt-5">
-          <Col md={12}>
-            <img src="./komponen-gambar/jumbotron-halaman-resep.png" className="img-fluid" alt="" />
-          </Col>
-        </Row>
-        <Row>
-          <Col md={12}><h5>Top Resep Mingguan</h5></Col>
+        <Image className="mt-5" src="./komponen-gambar/jumbotron-halaman-resep.png" fluid />
+        <Row className="mt-3 mb-3">
+          <Col md={12}><h5>Resep Sarapan</h5></Col>
           <Row className="m-auto">
             <Col xs={6} md={3} className="mb-4">
               <Card>
-                <Card.Img variant="top" src="/komponen-gambar/gulai-ikan.png" />
-                <Card.ImgOverlay className="w-25 text-center ms-auto">
-                  <Card.Text className="bg-dark text-light">
-                    <FontAwesomeIcon icon={faBookmark} />
-                  </Card.Text>
+                <Card.Img variant="top" src="/komponen-gambar/sup jagung.png" />
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
                 </Card.ImgOverlay>
                 <Card.Body>
-                  <Card.Title className="text-center"><h5>Gulai ayam</h5></Card.Title>
+                  <Card.Title className="text-center">
+                    <h5>
+                      <a className="link-pindah-kedetail" href="halamanDetailResep">Soup Krim Jamur</a>
+                      {/* <Card.Link href="./halamanDetailResep">Card Link</Card.Link> */}
+                    </h5>
+                  </Card.Title>
                   <Card.Text>
                     <Row>
                       <Col>
-                        <p><FontAwesomeIcon icon={faClock} /> 25 Menit</p>
+                        <FontAwesomeIcon icon={faClock} /> 25 Menit
                       </Col>
                       <Col>
-                        <p><FontAwesomeIcon icon={faUtensils} /> 2 Porsi</p>
+                        <FontAwesomeIcon icon={faUtensils} /> 2 Porsi
                       </Col>
                     </Row>
                     <Col style={{borderRadius: '100%', width: '30px', height: '30px'}} className="bg-oranye ms-auto text-light">
@@ -63,20 +62,24 @@ const HalamanResep = () => {
             <Col xs={6} md={3} className="mb-4">
               <Card>
                 <Card.Img variant="top" src="/komponen-gambar/ikan-bakar.png" />
-                <Card.ImgOverlay className="w-25 text-center ms-auto">
-                  <Card.Text className="bg-dark text-light">
-                    <FontAwesomeIcon icon={faBookmark} />
-                  </Card.Text>
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
                 </Card.ImgOverlay>
                 <Card.Body>
                   <Card.Title className="text-center"><h5>Ikan Bakar</h5></Card.Title>
                   <Card.Text>
                     <Row>
                       <Col>
-                        <p><FontAwesomeIcon icon={faClock} /> 25 Menit</p>
+                        <FontAwesomeIcon icon={faClock} /> 25 Menit
                       </Col>
                       <Col>
-                        <p><FontAwesomeIcon icon={faUtensils} /> 2 Porsi</p>
+                        <FontAwesomeIcon icon={faUtensils} /> 2 Porsi
                       </Col>
                     </Row>
                     <Col style={{borderRadius: '100%', width: '30px', height: '30px'}} className="bg-oranye ms-auto text-light">
@@ -89,20 +92,24 @@ const HalamanResep = () => {
             <Col xs={6} md={3} className="mb-4">
               <Card>
                 <Card.Img variant="top" src="/komponen-gambar/nasi-kuning.png" />
-                <Card.ImgOverlay className="w-25 text-center ms-auto">
-                  <Card.Text className="bg-dark text-light">
-                    <FontAwesomeIcon icon={faBookmark} />
-                  </Card.Text>
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
                 </Card.ImgOverlay>
                 <Card.Body>
                   <Card.Title className="text-center"><h5>Nasi Kuning</h5></Card.Title>
                   <Card.Text>
                     <Row>
                       <Col>
-                        <p><FontAwesomeIcon icon={faClock} /> 25 Menit</p>
+                        <FontAwesomeIcon icon={faClock} /> 25 Menit
                       </Col>
                       <Col>
-                        <p><FontAwesomeIcon icon={faUtensils} /> 2 Porsi</p>
+                        <FontAwesomeIcon icon={faUtensils} /> 2 Porsi
                       </Col>
                     </Row>
                     <Col style={{borderRadius: '100%', width: '30px', height: '30px'}} className="bg-oranye ms-auto text-light">
@@ -115,20 +122,24 @@ const HalamanResep = () => {
             <Col xs={6} md={3} className="mb-4">
               <Card>
                 <Card.Img variant="top" src="/komponen-gambar/soto-bogor.png" />
-                <Card.ImgOverlay className="w-25 text-center ms-auto">
-                  <Card.Text className="bg-dark text-light">
-                    <FontAwesomeIcon icon={faBookmark} />
-                  </Card.Text>
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
                 </Card.ImgOverlay>
                 <Card.Body>
                   <Card.Title className="text-center"><h5>Soto Bogor</h5></Card.Title>
                   <Card.Text>
                     <Row>
                       <Col>
-                        <p><FontAwesomeIcon icon={faClock} /> 25 Menit</p>
+                        <FontAwesomeIcon icon={faClock} /> 25 Menit
                       </Col>
                       <Col>
-                        <p><FontAwesomeIcon icon={faUtensils} /> 2 Porsi</p>
+                        <FontAwesomeIcon icon={faUtensils} /> 2 Porsi
                       </Col>
                     </Row>
                     <Col style={{borderRadius: '100%', width: '30px', height: '30px'}} className="bg-oranye ms-auto text-light">
@@ -139,304 +150,401 @@ const HalamanResep = () => {
               </Card>
             </Col>
           </Row>
+          <Row>
+              <Col className="m-auto" md={2}>
+                  <Paginasi/>
+              </Col>
+          </Row>
         </Row>
-        <Row className="mb-4 p-4" style={{backgroundColor: '#FDF2E9'}}>
-          <Col md={12}>
-            <h2 className="text-center text-oranye mt-4">Masak Bahan Yang Kamu Punya</h2>
-          </Col>
-          <Col className="m-auto" md={10}>
-            <Row className="mt-5">
-              <Col xs={6} md={2} className="mb-3">
-                <Card>
-                  <Card.Img variant="top" src="/komponen-gambar/ikan.png" />
-                  <Card.Body>
-                    <Card.Title className="text-center"><h6>Ikan</h6></Card.Title>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col xs={6} md={2} className="mb-3">
-                <Card>
-                  <Card.Img variant="top" src="/komponen-gambar/ayam.png" />
-                  <Card.Body>
-                    <Card.Title className="text-center"><h6>Ayam</h6></Card.Title>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col xs={6} md={2} className="mb-3">
-                <Card>
-                  <Card.Img variant="top" src="/komponen-gambar/b-merah.png" />
-                  <Card.Body>
-                    <Card.Title className="text-center"><h6>Bawang Merah</h6></Card.Title>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col xs={6} md={2} className="mb-3">
-                <Card>
-                  <Card.Img variant="top" src="/komponen-gambar/telur.png" />
-                  <Card.Body>
-                    <Card.Title className="text-center"><h6>Telur</h6></Card.Title>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col xs={6} md={2} className="mb-3">
-                <Card>
-                  <Card.Img variant="top" src="/komponen-gambar/tomat.png" />
-                  <Card.Body>
-                    <Card.Title className="text-center"><h6>Tomat</h6></Card.Title>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col xs={6} md={2} className="mb-3">
-                <Card>
-                  <Card.Img variant="top" src="/komponen-gambar/kentang.png" />
-                  <Card.Body>
-                    <Card.Title className="text-center"><h6>Kentang</h6></Card.Title>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col xs={6} md={2} className="mb-3">
-                <Card>
-                  <Card.Img variant="top" src="/komponen-gambar/jamur.png" />
-                  <Card.Body>
-                    <Card.Title className="text-center"><h6>Jamur</h6></Card.Title>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col xs={6} md={2} className="mb-3">
-                <Card>
-                  <Card.Img variant="top" src="/komponen-gambar/tahu.png" />
-                  <Card.Body>
-                    <Card.Title className="text-center"><h6>Tahu</h6></Card.Title>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col xs={6} md={2} className="mb-3">
-                <Card>
-                  <Card.Img variant="top" src="/komponen-gambar/b-putih.png" />
-                  <Card.Body>
-                    <Card.Title className="text-center"><h6>Bawang Putih</h6></Card.Title>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col xs={6} md={2} className="mb-3">
-                <Card>
-                  <Card.Img variant="top" src="/komponen-gambar/tempe.png" />
-                  <Card.Body>
-                    <Card.Title className="text-center"><h6>Tempe</h6></Card.Title>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col xs={6} md={2} className="mb-3">
-                <Card>
-                  <Card.Img variant="top" src="/komponen-gambar/jagung.png" />
-                  <Card.Body>
-                    <Card.Title className="text-center"><h6>Jagung</h6></Card.Title>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col xs={6} md={2} className="mb-3">
-                <Card>
-                  <Card.Img variant="top" src="/komponen-gambar/cabe merah.png" />
-                  <Card.Body>
-                    <Card.Title className="text-center"><h6>Cabe Merah</h6></Card.Title>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
-          </Col>
-          <Col md={5} className="m-auto">
-            <a className="btn w-100 bg-oranye text-light" href="">Cari Resep <FontAwesomeIcon icon={faArrowRight} /></a>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={12}><h5>Bagi Resep</h5></Col>
+        <Row className="mb-3">
+          <Col md={12}><h5>Resep Makan Siang</h5></Col>
           <Row className="m-auto">
             <Col xs={6} md={3} className="mb-4">
               <Card>
+                <Card.Img variant="top" src="/komponen-gambar/sup jagung.png" />
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
+                </Card.ImgOverlay>
                 <Card.Body>
+                  <Card.Title className="text-center"><h5><a className="link-pindah-kedetail" href="halamanDetailResep">Soup Krim Jamur</a></h5></Card.Title>
                   <Card.Text>
                     <Row>
                       <Col>
-                        <p className="fw-bold">
-                          <img style={{width: '40px'}} className="me-3" src="/komponen-gambar/foto-profil.png" alt="" /> 
-                          Rose Blackpink
-                        </p>
+                        <FontAwesomeIcon icon={faClock} /> 25 Menit
+                      </Col>
+                      <Col>
+                        <FontAwesomeIcon icon={faUtensils} /> 2 Porsi
                       </Col>
                     </Row>
-                  </Card.Text>
-                </Card.Body>
-                <Card.Img variant="top" src="/komponen-gambar/gulai-ikan.png" />
-                <Card.Body>
-                  <Card.Title className="text-center"><h5>Gulai ayam</h5></Card.Title>
-                  <Card.Text>
-                    <Row>
-                      <Col>
-                        <p><FontAwesomeIcon icon={faClock} /> 25 Menit</p>
-                      </Col>
-                      <Col>
-                        <Col className="bg-oranye rounded ms-auto text-light w-75 p-1 text-center">
-                          <FontAwesomeIcon icon={faStar} /> 4.9
-                        </Col>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col>
-                        <p><FontAwesomeIcon icon={faEye} /> 150</p>
-                      </Col>
-                      <Col>
-                        <Col className="bg-oranye rounded ms-auto text-light w-50 p-1 text-center">
-                          <FontAwesomeIcon icon={faBookmark} />
-                        </Col>
-                      </Col>
-                    </Row>
+                    <Col style={{borderRadius: '100%', width: '30px', height: '30px'}} className="bg-oranye ms-auto text-light">
+                      <FontAwesomeIcon style={{margin: '25%'}} icon={faHeart} /> 
+                    </Col>
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
             <Col xs={6} md={3} className="mb-4">
               <Card>
-                <Card.Body>
-                  <Card.Text>
-                    <Row>
-                      <Col>
-                        <p className="fw-bold">
-                          <img style={{width: '40px'}} className="me-3" src="/komponen-gambar/foto-profil.png" alt="" /> 
-                          Rose Blackpink
-                        </p>
-                      </Col>
-                    </Row>
-                  </Card.Text>
-                </Card.Body>
                 <Card.Img variant="top" src="/komponen-gambar/ikan-bakar.png" />
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
+                </Card.ImgOverlay>
                 <Card.Body>
                   <Card.Title className="text-center"><h5>Ikan Bakar</h5></Card.Title>
                   <Card.Text>
                     <Row>
                       <Col>
-                        <p><FontAwesomeIcon icon={faClock} /> 25 Menit</p>
+                        <FontAwesomeIcon icon={faClock} /> 25 Menit
                       </Col>
                       <Col>
-                        <Col className="bg-oranye rounded ms-auto text-light w-75 p-1 text-center">
-                          <FontAwesomeIcon icon={faStar} /> 4.9
-                        </Col>
+                        <FontAwesomeIcon icon={faUtensils} /> 2 Porsi
                       </Col>
                     </Row>
-                    <Row>
-                      <Col>
-                        <p><FontAwesomeIcon icon={faEye} /> 150</p>
-                      </Col>
-                      <Col>
-                        <Col className="bg-oranye rounded ms-auto text-light w-50 p-1 text-center">
-                          <FontAwesomeIcon icon={faBookmark} />
-                        </Col>
-                      </Col>
-                    </Row>
+                    <Col style={{borderRadius: '100%', width: '30px', height: '30px'}} className="bg-oranye ms-auto text-light">
+                      <FontAwesomeIcon style={{margin: '25%'}} icon={faHeart} /> 
+                    </Col>
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
             <Col xs={6} md={3} className="mb-4">
               <Card>
+                <Card.Img variant="top" src="/komponen-gambar/nasi-kuning.png" />
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
+                </Card.ImgOverlay>
                 <Card.Body>
+                  <Card.Title className="text-center"><h5>Nasi Kuning</h5></Card.Title>
                   <Card.Text>
                     <Row>
                       <Col>
-                        <p className="fw-bold">
-                          <img style={{width: '40px'}} className="me-3" src="/komponen-gambar/foto-profil.png" alt="" /> 
-                          Rose Blackpink
-                        </p>
+                        <FontAwesomeIcon icon={faClock} /> 25 Menit
+                      </Col>
+                      <Col>
+                        <FontAwesomeIcon icon={faUtensils} /> 2 Porsi
                       </Col>
                     </Row>
-                  </Card.Text>
-                </Card.Body>
-                <Card.Img variant="top" src="/komponen-gambar/mie-aceh.png" />
-                <Card.Body>
-                  <Card.Title className="text-center"><h5>Mie Aceh</h5></Card.Title>
-                  <Card.Text>
-                    <Row>
-                      <Col>
-                        <p><FontAwesomeIcon icon={faClock} /> 25 Menit</p>
-                      </Col>
-                      <Col>
-                        <Col className="bg-oranye rounded ms-auto text-light w-75 p-1 text-center">
-                          <FontAwesomeIcon icon={faStar} /> 4.9
-                        </Col>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col>
-                        <p><FontAwesomeIcon icon={faEye} /> 150</p>
-                      </Col>
-                      <Col>
-                        <Col className="bg-oranye rounded ms-auto text-light w-50 p-1 text-center">
-                          <FontAwesomeIcon icon={faBookmark} />
-                        </Col>
-                      </Col>
-                    </Row>
+                    <Col style={{borderRadius: '100%', width: '30px', height: '30px'}} className="bg-oranye ms-auto text-light">
+                      <FontAwesomeIcon style={{margin: '25%'}} icon={faHeart} /> 
+                    </Col>
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
             <Col xs={6} md={3} className="mb-4">
               <Card>
+                <Card.Img variant="top" src="/komponen-gambar/soto-bogor.png" />
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
+                </Card.ImgOverlay>
                 <Card.Body>
+                  <Card.Title className="text-center"><h5>Soto Bogor</h5></Card.Title>
                   <Card.Text>
                     <Row>
                       <Col>
-                        <p className="fw-bold">
-                          <img style={{width: '40px'}} className="me-3" src="/komponen-gambar/foto-profil.png" alt="" /> 
-                          Rose Blackpink
-                        </p>
+                        <FontAwesomeIcon icon={faClock} /> 25 Menit
+                      </Col>
+                      <Col>
+                        <FontAwesomeIcon icon={faUtensils} /> 2 Porsi
                       </Col>
                     </Row>
-                  </Card.Text>
-                </Card.Body>
-                <Card.Img variant="top" src="/komponen-gambar/rendang.png" />
-                <Card.Body>
-                  <Card.Title className="text-center"><h5>Rendang</h5></Card.Title>
-                  <Card.Text>
-                    <Row>
-                      <Col>
-                        <p><FontAwesomeIcon icon={faClock} /> 25 Menit</p>
-                      </Col>
-                      <Col>
-                        <Col className="bg-oranye rounded ms-auto text-light w-75 p-1 text-center">
-                          <FontAwesomeIcon icon={faStar} /> 4.9
-                        </Col>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col>
-                        <p><FontAwesomeIcon icon={faEye} /> 150</p>
-                      </Col>
-                      <Col>
-                        <Col className="bg-oranye rounded ms-auto text-light w-50 p-1 text-center">
-                          <FontAwesomeIcon icon={faBookmark} />
-                        </Col>
-                      </Col>
-                    </Row>
+                    <Col style={{borderRadius: '100%', width: '30px', height: '30px'}} className="bg-oranye ms-auto text-light">
+                      <FontAwesomeIcon style={{margin: '25%'}} icon={faHeart} /> 
+                    </Col>
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
           </Row>
           <Row>
-            <Col className="m-auto" md={2}>
-              <div>
-                <Pagination className="">{items}</Pagination>
-              </div>
-            </Col>
+              <Col className="m-auto" md={2}>
+                  <Paginasi/>
+              </Col>
           </Row>
         </Row>
-      </Container>
-      <Container fluid>
-        <Row>
-          <Col md={6} className="p-5">
-            <img className="img-fluid mt-5 ms-5" src="/komponen-gambar/unduh aplikasi.png" alt="" />
-          </Col>
-          <Col md={6}>
-            <img className="img-fluid ms-auto" src="/komponen-gambar/mockup hp.png" alt="" />
-          </Col>
+        <Row className="mb-3">
+          <Col md={12}><h5>Resep Makan Malam</h5></Col>
+          <Row className="m-auto">
+            <Col xs={6} md={3} className="mb-4">
+              <Card>
+                <Card.Img variant="top" src="/komponen-gambar/sup jagung.png" />
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
+                </Card.ImgOverlay>
+                <Card.Body>
+                  <Card.Title className="text-center"><h5><a className="link-pindah-kedetail" href="halamanDetailResep">Soup Krim Jamur</a></h5></Card.Title>
+                  <Card.Text>
+                    <Row>
+                      <Col>
+                        <FontAwesomeIcon icon={faClock} /> 25 Menit
+                      </Col>
+                      <Col>
+                        <FontAwesomeIcon icon={faUtensils} /> 2 Porsi
+                      </Col>
+                    </Row>
+                    <Col style={{borderRadius: '100%', width: '30px', height: '30px'}} className="bg-oranye ms-auto text-light">
+                      <FontAwesomeIcon style={{margin: '25%'}} icon={faHeart} /> 
+                    </Col>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={6} md={3} className="mb-4">
+              <Card>
+                <Card.Img variant="top" src="/komponen-gambar/ikan-bakar.png" />
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
+                </Card.ImgOverlay>
+                <Card.Body>
+                  <Card.Title className="text-center"><h5>Ikan Bakar</h5></Card.Title>
+                  <Card.Text>
+                    <Row>
+                      <Col>
+                        <FontAwesomeIcon icon={faClock} /> 25 Menit
+                      </Col>
+                      <Col>
+                        <FontAwesomeIcon icon={faUtensils} /> 2 Porsi
+                      </Col>
+                    </Row>
+                    <Col style={{borderRadius: '100%', width: '30px', height: '30px'}} className="bg-oranye ms-auto text-light">
+                      <FontAwesomeIcon style={{margin: '25%'}} icon={faHeart} /> 
+                    </Col>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={6} md={3} className="mb-4">
+              <Card>
+                <Card.Img variant="top" src="/komponen-gambar/nasi-kuning.png" />
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
+                </Card.ImgOverlay>
+                <Card.Body>
+                  <Card.Title className="text-center"><h5>Nasi Kuning</h5></Card.Title>
+                  <Card.Text>
+                    <Row>
+                      <Col>
+                        <FontAwesomeIcon icon={faClock} /> 25 Menit
+                      </Col>
+                      <Col>
+                        <FontAwesomeIcon icon={faUtensils} /> 2 Porsi
+                      </Col>
+                    </Row>
+                    <Col style={{borderRadius: '100%', width: '30px', height: '30px'}} className="bg-oranye ms-auto text-light">
+                      <FontAwesomeIcon style={{margin: '25%'}} icon={faHeart} /> 
+                    </Col>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={6} md={3} className="mb-4">
+              <Card>
+                <Card.Img variant="top" src="/komponen-gambar/soto-bogor.png" />
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
+                </Card.ImgOverlay>
+                <Card.Body>
+                  <Card.Title className="text-center"><h5>Soto Bogor</h5></Card.Title>
+                  <Card.Text>
+                    <Row>
+                      <Col>
+                        <FontAwesomeIcon icon={faClock} /> 25 Menit
+                      </Col>
+                      <Col>
+                        <FontAwesomeIcon icon={faUtensils} /> 2 Porsi
+                      </Col>
+                    </Row>
+                    <Col style={{borderRadius: '100%', width: '30px', height: '30px'}} className="bg-oranye ms-auto text-light">
+                      <FontAwesomeIcon style={{margin: '25%'}} icon={faHeart} /> 
+                    </Col>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+          <Row>
+              <Col className="m-auto" md={2}>
+                  <Paginasi/>
+              </Col>
+          </Row>
+        </Row>
+        <Row className="mb-3">
+          <Col md={12}><h5>Resep Rendah Kalori</h5></Col>
+          <Row className="m-auto">
+            <Col xs={6} md={3} className="mb-4">
+              <Card>
+                <Card.Img variant="top" src="/komponen-gambar/sup jagung.png" />
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
+                </Card.ImgOverlay>
+                <Card.Body>
+                  <Card.Title className="text-center"><h5><a className="link-pindah-kedetail" href="halamanDetailResep">Soup Krim Jamur</a></h5></Card.Title>
+                  <Card.Text>
+                    <Row>
+                      <Col>
+                        <FontAwesomeIcon icon={faClock} /> 25 Menit
+                      </Col>
+                      <Col>
+                        <FontAwesomeIcon icon={faUtensils} /> 2 Porsi
+                      </Col>
+                    </Row>
+                    <Col style={{borderRadius: '100%', width: '30px', height: '30px'}} className="bg-oranye ms-auto text-light">
+                      <FontAwesomeIcon style={{margin: '25%'}} icon={faHeart} /> 
+                    </Col>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={6} md={3} className="mb-4">
+              <Card>
+                <Card.Img variant="top" src="/komponen-gambar/ikan-bakar.png" />
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
+                </Card.ImgOverlay>
+                <Card.Body>
+                  <Card.Title className="text-center"><h5>Ikan Bakar</h5></Card.Title>
+                  <Card.Text>
+                    <Row>
+                      <Col>
+                        <FontAwesomeIcon icon={faClock} /> 25 Menit
+                      </Col>
+                      <Col>
+                        <FontAwesomeIcon icon={faUtensils} /> 2 Porsi
+                      </Col>
+                    </Row>
+                    <Col style={{borderRadius: '100%', width: '30px', height: '30px'}} className="bg-oranye ms-auto text-light">
+                      <FontAwesomeIcon style={{margin: '25%'}} icon={faHeart} /> 
+                    </Col>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={6} md={3} className="mb-4">
+              <Card>
+                <Card.Img variant="top" src="/komponen-gambar/nasi-kuning.png" />
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
+                </Card.ImgOverlay>
+                <Card.Body>
+                  <Card.Title className="text-center"><h5>Nasi Kuning</h5></Card.Title>
+                  <Card.Text>
+                    <Row>
+                      <Col>
+                        <FontAwesomeIcon icon={faClock} /> 25 Menit
+                      </Col>
+                      <Col>
+                        <FontAwesomeIcon icon={faUtensils} /> 2 Porsi
+                      </Col>
+                    </Row>
+                    <Col style={{borderRadius: '100%', width: '30px', height: '30px'}} className="bg-oranye ms-auto text-light">
+                      <FontAwesomeIcon style={{margin: '25%'}} icon={faHeart} /> 
+                    </Col>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={6} md={3} className="mb-4">
+              <Card>
+                <Card.Img variant="top" src="/komponen-gambar/soto-bogor.png" />
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
+                </Card.ImgOverlay>
+                <Card.Body>
+                  <Card.Title className="text-center"><h5>Soto Bogor</h5></Card.Title>
+                  <Card.Text>
+                    <Row>
+                      <Col>
+                        <FontAwesomeIcon icon={faClock} /> 25 Menit
+                      </Col>
+                      <Col>
+                        <FontAwesomeIcon icon={faUtensils} /> 2 Porsi
+                      </Col>
+                    </Row>
+                    <Col style={{borderRadius: '100%', width: '30px', height: '30px'}} className="bg-oranye ms-auto text-light">
+                      <FontAwesomeIcon style={{margin: '25%'}} icon={faHeart} /> 
+                    </Col>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+          <Row>
+              <Col className="m-auto" md={2}>
+                  <Paginasi/>
+              </Col>
+          </Row>
         </Row>
       </Container>
       <Footer/>

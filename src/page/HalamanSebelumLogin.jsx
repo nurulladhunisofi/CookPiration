@@ -1,6 +1,7 @@
 import React from 'react'
 import NavbarSebelumLogin from '../components/NavbarSebelumLogin'
 import Footer from '../components/Footer'
+import Paginasi from '../components/Paginasi';
 import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -14,15 +15,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faBookmark, faClock, faUtensils, faHeart, faStar, faEye } from '@fortawesome/free-solid-svg-icons'
 
 const HalamanSebelumLogin = () => {
-  let active = 2;
-  let items = [];
-  for (let number = 1; number <= 5; number++) {
-    items.push(
-      <Pagination.Item key={number} active={number === active}>
-        {number}
-      </Pagination.Item>,
-    );
-  }
   return (
     <div>
       <NavbarSebelumLogin/>
@@ -44,10 +36,14 @@ const HalamanSebelumLogin = () => {
             <Col xs={6} md={3} className="mb-4">
               <Card>
                 <Card.Img variant="top" src="/komponen-gambar/gulai-ikan.png" />
-                <Card.ImgOverlay className="w-25 text-center ms-auto">
-                  <Card.Text className="bg-dark text-light">
-                    <FontAwesomeIcon icon={faBookmark} />
-                  </Card.Text>
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                      <Card.Text className="text-light">
+                        <FontAwesomeIcon icon={faBookmark} />
+                      </Card.Text>
+                    </Col>
+                  </Row>
                 </Card.ImgOverlay>
                 <Card.Body>
                   <Card.Title className="text-center"><h5>Gulai ayam</h5></Card.Title>
@@ -70,10 +66,14 @@ const HalamanSebelumLogin = () => {
             <Col xs={6} md={3} className="mb-4">
               <Card>
                 <Card.Img variant="top" src="/komponen-gambar/ikan-bakar.png" />
-                <Card.ImgOverlay className="w-25 text-center ms-auto">
-                  <Card.Text className="bg-dark text-light">
-                    <FontAwesomeIcon icon={faBookmark} />
-                  </Card.Text>
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
                 </Card.ImgOverlay>
                 <Card.Body>
                   <Card.Title className="text-center"><h5>Ikan Bakar</h5></Card.Title>
@@ -96,10 +96,14 @@ const HalamanSebelumLogin = () => {
             <Col xs={6} md={3} className="mb-4">
               <Card>
                 <Card.Img variant="top" src="/komponen-gambar/nasi-kuning.png" />
-                <Card.ImgOverlay className="w-25 text-center ms-auto">
-                  <Card.Text className="bg-dark text-light">
-                    <FontAwesomeIcon icon={faBookmark} />
-                  </Card.Text>
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
                 </Card.ImgOverlay>
                 <Card.Body>
                   <Card.Title className="text-center"><h5>Nasi Kuning</h5></Card.Title>
@@ -122,10 +126,14 @@ const HalamanSebelumLogin = () => {
             <Col xs={6} md={3} className="mb-4">
               <Card>
                 <Card.Img variant="top" src="/komponen-gambar/soto-bogor.png" />
-                <Card.ImgOverlay className="w-25 text-center ms-auto">
-                  <Card.Text className="bg-dark text-light">
-                    <FontAwesomeIcon icon={faBookmark} />
-                  </Card.Text>
+                <Card.ImgOverlay className="text-center ms-auto">
+                  <Row className="m-auto">
+                    <Col xs={4} md={2} className="bg-dark ms-auto">
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
+                    </Col>
+                  </Row>
                 </Card.ImgOverlay>
                 <Card.Body>
                   <Card.Title className="text-center"><h5>Soto Bogor</h5></Card.Title>
@@ -147,7 +155,7 @@ const HalamanSebelumLogin = () => {
             </Col>
           </Row>
         </Row>
-        <Row className="mb-4 p-4" style={{backgroundColor: '#FDF2E9'}}>
+        <Row className="mb-4 p-4" style={{backgroundColor: '#FDF2E9'}} >
           <Col md={12}>
             <h2 className="text-center text-oranye mt-4">Masak Bahan Yang Kamu Punya</h2>
           </Col>
@@ -428,10 +436,8 @@ const HalamanSebelumLogin = () => {
             </Col>
           </Row>
           <Row>
-            <Col className="m-auto" md={2}>
-              <div>
-                <Pagination className="">{items}</Pagination>
-              </div>
+            <Col md={12}>
+              <Paginasi/>
             </Col>
           </Row>
         </Row>
