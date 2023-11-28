@@ -28,10 +28,8 @@ const HalamanDetailArtikel = () => {
                 <Col md={4}>
                     <img className="img-fluid" src="./komponen-gambar/artikel-mie-aceh.png" alt="" />
                 </Col>
-                <Col md={8}>
-                    <div className="text-center fw-bold mt-5">
+                <Col md={8} className="text-center fw-bold mt-5">
                         Mie Aceh, dengan ciri khas mi yang kenyal dan kuah rempah yang pekat, telah mencuri perhatian pencinta kuliner di seluruh negeri. Namun, apa sebenarnya yang membuat hidangan ini begitu spesial? Artikel ini akan mengungkap segala rahasia dari proses pembuatannya, bumbu-bumbu khas yang melengkapi, hingga asal-usulnya yang kaya akan warisan budaya.
-                    </div>
                 </Col>
             </Row>
             <Row className="mt-3">
@@ -43,7 +41,7 @@ const HalamanDetailArtikel = () => {
                         <Card.Subtitle className="mb-1 ms-2 mt-2 text-oranye">24 September 2023</Card.Subtitle>
                         <Card.Body>
                             <Card.Title><h5>Sejarah Mie Aceh</h5> </Card.Title>
-                            <Card.Text className="w-25 text-oranye">
+                            <Card.Text style={{width:'200px'}} className="text-oranye">
                                 <Row>
                                     <Col>
                                         <FontAwesomeIcon icon={faUser} /> Admin
@@ -53,7 +51,7 @@ const HalamanDetailArtikel = () => {
                                     </Col>
                                 </Row>
                             </Card.Text>
-                            <Card.Text className="w-25 ms-auto text-oranye text-center" style={{backgroundColor:'white', border:'2px solid #E98649', borderRadius:'40px', fontSize:'20pt'}}>
+                            <Card.Text className="ms-auto text-oranye text-center" style={{backgroundColor:'white', border:'2px solid #E98649', borderRadius:'40px', fontSize:'20pt', width:'140px'}}>
                                 <Row>
                                     <Col>
                                         <FontAwesomeIcon icon={faHeart} /> Suka

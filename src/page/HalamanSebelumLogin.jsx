@@ -12,7 +12,7 @@ import Stack from 'react-bootstrap/Stack';
 import Pagination from 'react-bootstrap/Pagination';
 //font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight, faBookmark, faClock, faUtensils, faHeart, faStar, faEye } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faBookmark, faUser, faClock, faUtensils, faHeart, faStar, faEye } from '@fortawesome/free-solid-svg-icons'
 
 const HalamanSebelumLogin = () => {
   return (
@@ -263,7 +263,7 @@ const HalamanSebelumLogin = () => {
             <a className="btn w-100 bg-oranye text-light" href="">Cari Resep <FontAwesomeIcon icon={faArrowRight} /></a>
           </Col>
         </Row>
-        <Row>
+        <Row className="mb-4">
           <Col md={12}><h5>Bagi Resep</h5></Col>
           <Row className="m-auto">
             <Col xs={6} md={3} className="mb-4">
@@ -439,6 +439,88 @@ const HalamanSebelumLogin = () => {
             <Col md={12}>
               <Paginasi/>
             </Col>
+          </Row>
+        </Row>
+        <Row>
+          <Col md={12}><h5>Artikel Makanan</h5></Col>
+          <Row>
+              <Col xs={6} md={4} className="mb-3">
+                  <Card style={{maxWidth:'18rem'}}>
+                      <Card.Img variant="top" src="/komponen-gambar/mie-aceh.png" />
+                      <Card.Subtitle className="mb-1 ms-2 mt-2 text-oranye">24 September 2023</Card.Subtitle>
+                      <Card.Body>
+                          <Card.Title><h5><a className="link-pindah-kedetail" href="halamanDetailArtikel">Mie Aceh</a></h5></Card.Title>
+                          <Card.Text className="card-text-scroll">
+                              Mie Aceh merupakan hidangan mie pedas khas Indonesia yang berasal dari Aceh, disajikan dengan kuah kental berbumbu......
+                          </Card.Text>
+                      </Card.Body>
+                      <Card.Body className="bg-oranye text-light">
+                          <Card.Text className="bg-oranye text-light">
+                              <Row>
+                                  <Col>
+                                      <FontAwesomeIcon icon={faUser} /> Admin
+                                  </Col>
+                                  <Col>
+                                      <FontAwesomeIcon icon={faHeart} /> 10 Suka
+                                  </Col>
+                              </Row>
+                          </Card.Text>
+                      </Card.Body>
+                  </Card>
+              </Col>
+              <Col xs={6} md={4} className="mb-3">
+                  <Card style={{maxWidth:'18rem'}}>
+                      <Card.Img variant="top" src="/komponen-gambar/mie-aceh.png" />
+                      <Card.Subtitle className="mb-1 ms-2 mt-2 text-oranye">24 September 2023</Card.Subtitle>
+                      <Card.Body>
+                          <Card.Title><h5><a className="link-pindah-kedetail" href="halamanDetailArtikel">Mie Aceh</a></h5></Card.Title>
+                          <Card.Text className="card-text-scroll">
+                              Mie Aceh merupakan hidangan mie pedas khas Indonesia yang berasal dari Aceh, disajikan dengan kuah kental berbumbu......
+                          </Card.Text>
+                      </Card.Body>
+                      <Card.Body className="bg-oranye text-light">
+                          <Card.Text className="bg-oranye text-light">
+                              <Row>
+                                  <Col>
+                                      <FontAwesomeIcon icon={faUser} /> Admin
+                                  </Col>
+                                  <Col>
+                                      <FontAwesomeIcon icon={faHeart} /> 10 Suka
+                                  </Col>
+                              </Row>
+                          </Card.Text>
+                      </Card.Body>
+                  </Card>
+              </Col>
+              <Col xs={6} md={4} className="mb-3">
+                  <Card style={{maxWidth:'18rem'}}>
+                      <Card.Img variant="top" src="/komponen-gambar/mie-aceh.png" />
+                      <Card.Subtitle className="mb-1 ms-2 mt-2 text-oranye">24 September 2023</Card.Subtitle>
+                      <Card.Body>
+                          <Card.Title><h5><a className="link-pindah-kedetail" href="halamanDetailArtikel">Mie Aceh</a></h5></Card.Title>
+                          <Card.Text className="card-text-scroll">
+                              Mie Aceh merupakan hidangan mie pedas khas Indonesia yang berasal dari Aceh, disajikan dengan kuah kental berbumbu......
+                          </Card.Text>
+                      </Card.Body>
+                      <Card.Body className="bg-oranye text-light">
+                          <Card.Text className="bg-oranye text-light">
+                              <Row>
+                                  <Col>
+                                      <FontAwesomeIcon icon={faUser} /> Admin
+                                  </Col>
+                                  <Col>
+                                      <FontAwesomeIcon icon={faHeart} /> 10 Suka
+                                  </Col>
+                              </Row>
+                          </Card.Text>
+                      </Card.Body>
+                  </Card>
+              </Col>
+          </Row>
+          <Row>
+              <Col className="m-auto" md={2}>
+                  <Paginasi/>
+              </Col>
           </Row>
         </Row>
       </Container>

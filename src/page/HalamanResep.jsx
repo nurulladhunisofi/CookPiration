@@ -9,6 +9,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import CardImg from 'react-bootstrap/CardImg'
+import CardImgOverlay from 'react-bootstrap/CardImgOverlay'
+import CardLink from 'react-bootstrap/CardLink'
+import CardSubtitle from 'react-bootstrap/CardSubtitle'
+import CardText from 'react-bootstrap/CardText'
+import CardTitle from 'react-bootstrap/CardTitle'
 import Stack from 'react-bootstrap/Stack';
 // font awesome
 
@@ -26,7 +32,7 @@ const HalamanResep = () => {
           <Row className="m-auto">
             <Col xs={6} md={3} className="mb-4">
               <Card>
-                <Card.Img variant="top" src="/komponen-gambar/sup jagung.png" />
+                <Card.Img variant="bottom" src="/komponen-gambar/sup jagung.png" />
                 <Card.ImgOverlay className="text-center ms-auto">
                   <Row className="m-auto">
                     <Col xs={4} md={2} className="bg-dark ms-auto">
