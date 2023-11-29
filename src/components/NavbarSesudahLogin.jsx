@@ -15,7 +15,7 @@ const NavbarSesudahLogin = () => {
   const handleShow = () => setShow(true);
   return (
     <div>
-        <Navbar expand="md" className="bg-putih fixed-top">
+        <Navbar expand="md" className="bg-putih fixed-top nav-underline">
         <Container fluid>
         <Navbar.Brand href="#home">
             <img alt="" src="/logo.png" width="50" className="d-inline-block align-top"/>{' '}
@@ -39,7 +39,7 @@ const NavbarSesudahLogin = () => {
                 }
                 menuVariant="light" className='w-25'
                 >
-                    <NavDropdown.Item href="">Profile</NavDropdown.Item>
+                    <NavDropdown.Item href="halamanProfile">Profile</NavDropdown.Item>
                     <NavDropdown.Item href="" onClick={handleShow}>
                         Logout
                     </NavDropdown.Item>

@@ -8,7 +8,7 @@ import Form from 'react-bootstrap/Form';
 const NavbarSebelumLogin = (props) => {
   return (
     <div>
-        <Navbar expand="md" className="bg-putih fixed-top">
+        <Navbar expand="md" className="bg-putih fixed-top nav-underline">
         <Container fluid>
         <Navbar.Brand href="#home">
             <img alt="" src="/logo.png" width="50" className="d-inline-block align-top"/>{' '}

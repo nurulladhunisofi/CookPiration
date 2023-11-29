@@ -7,6 +7,9 @@ import HalamanArtikel from './page/HalamanArtikel'
 import HalamanDetailArtikel from './page/HalamanDetailArtikel'
 import HalamanResep from './page/HalamanResep'
 import HalamanDetailResep from './page/HalamanDetailResep'
+import HalamanProfile from './page/HalamanProfile'
+import HalamanAccountLain from './page/HalamanAccountLain'
+import HalamanPencarian from './page/HalamanPencarian'
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 // komponen
 import NavbarSebelumLogin from './components/NavbarSebelumLogin'
@@ -23,6 +26,9 @@ const App = () => {
           <Route path="halamanDetailResep" element={<HalamanDetailResep/>} />
           <Route path="halamanArtikel" element={<HalamanArtikel/>} />
           <Route path="halamanDetailArtikel" element={<HalamanDetailArtikel/>} />
+          <Route path="halamanProfile" element={<HalamanProfile/>} />
+          <Route path="halamanAccountLain" element={<HalamanAccountLain/>} />
+          <Route path="halamanPencarian" element={<HalamanPencarian/>} />
         </Routes>
       </BrowserRouter>
     </div>

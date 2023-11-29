@@ -16,19 +16,19 @@ const Register = () => {
             <Form>
                 <Row>
                     <Col md={6}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                             <Form.Label>Nama Depan</Form.Label>
                             <Form.Control type="text" placeholder="" />
                         </Form.Group>
                     </Col>
                     <Col md={6}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                             <Form.Label>Nama Belakang</Form.Label>
                             <Form.Control type="text" placeholder="" />
                         </Form.Group>
                     </Col>
                     <Col md={6}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                             <Form.Label>Jenis Kelamin</Form.Label>
                             <Form.Select aria-label="Default select example">
                                 <option value=""></option>
@@ -38,19 +38,19 @@ const Register = () => {
                         </Form.Group>
                     </Col>
                     <Col md={6}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                             <Form.Label>Makanan Favorit</Form.Label>
                             <Form.Control type="text" placeholder="" />
                         </Form.Group>
                     </Col>
                     <Col md={6}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                             <Form.Label>Email</Form.Label>
                             <Form.Control type="email" placeholder="" />
                         </Form.Group>
                     </Col>
                     <Col md={6}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" placeholder="" />
                         </Form.Group>

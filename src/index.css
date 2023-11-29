@@ -6,6 +6,9 @@
   color: black;
   text-decoration: none;
 }
+.bg-hitam-opacity{
+  background-color: #e98649c6 !important;
+}
 .bg-cream{
   background-color: #FDF2E9 !important;
 }
@@ -65,4 +68,15 @@
 .card-text-scroll{
   height: 80px;
   overflow: scroll;
+}
+/* nav tab di profile */
+.nav-tabs .nav-link {
+  color: #E98649 !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.nav-tabs .nav-link.active {
+  border-bottom: solid 4px #E98649 !important;
 }
