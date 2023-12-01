@@ -33,7 +33,7 @@ const HalamanResep = () => {
             <Col xs={6} md={3} className="mb-4">
               <Card>
                 <Card.Img variant="bottom" src="/komponen-gambar/sup jagung.png" />
-                <Card.ImgOverlay className="text-center ms-auto">
+                <Card.ImgOverlay className="text-center ms-auto" style={{height:'50%'}}>
                   <Row className="m-auto">
                     <Col xs={4} md={2} className="bg-dark ms-auto">
                     <Card.Text className="text-light">
