@@ -212,7 +212,7 @@ const HalamanProfile = () => {
                         <Card.Text>
                           <Row>
                             <Col>
-                              <p><FontAwesomeIcon icon={faClock} /> 25 Menit</p>
+                              <FontAwesomeIcon icon={faClock} /> 25 Menit
                             </Col>
                             <Col>
                               <Col className="bg-oranye rounded ms-auto text-light w-75 p-1 text-center">
@@ -222,7 +222,7 @@ const HalamanProfile = () => {
                           </Row>
                           <Row>
                             <Col>
-                              <p><FontAwesomeIcon icon={faEye} /> 150</p>
+                              <FontAwesomeIcon icon={faEye} /> 150
                             </Col>
                             <Col>
                               <Col className="bg-danger rounded ms-auto text-light w-50 p-1 text-center">
@@ -254,7 +254,7 @@ const HalamanProfile = () => {
                         <Card.Text>
                           <Row>
                             <Col>
-                              <p><FontAwesomeIcon icon={faClock} /> 25 Menit</p>
+                              <FontAwesomeIcon icon={faClock} /> 25 Menit
                             </Col>
                             <Col>
                               <Col className="bg-oranye rounded ms-auto text-light w-75 p-1 text-center">
@@ -296,7 +296,7 @@ const HalamanProfile = () => {
                         <Card.Text>
                           <Row>
                             <Col>
-                              <p><FontAwesomeIcon icon={faClock} /> 25 Menit</p>
+                              <FontAwesomeIcon icon={faClock} /> 25 Menit
                             </Col>
                             <Col>
                               <Col className="bg-oranye rounded ms-auto text-light w-75 p-1 text-center">
@@ -338,7 +338,7 @@ const HalamanProfile = () => {
                         <Card.Text>
                           <Row>
                             <Col>
-                              <p><FontAwesomeIcon icon={faClock} /> 25 Menit</p>
+                              <FontAwesomeIcon icon={faClock} /> 25 Menit
                             </Col>
                             <Col>
                               <Col className="bg-oranye rounded ms-auto text-light w-75 p-1 text-center">

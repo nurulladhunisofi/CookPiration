@@ -39,9 +39,9 @@ const HalamanSebelumLogin = () => {
                 <Card.ImgOverlay className="text-center ms-auto">
                   <Row className="m-auto">
                     <Col xs={4} md={2} className="bg-dark ms-auto">
-                      <Card.Text className="text-light">
-                        <FontAwesomeIcon icon={faBookmark} />
-                      </Card.Text>
+                    <Card.Text className="text-light">
+                      <FontAwesomeIcon icon={faBookmark} />
+                    </Card.Text>
                     </Col>
                   </Row>
                 </Card.ImgOverlay>
@@ -155,7 +155,7 @@ const HalamanSebelumLogin = () => {
             </Col>
           </Row>
         </Row>
-        <Row className="mb-4 p-4" style={{backgroundColor: '#FDF2E9'}} >
+        <Row className="mb-4 p-4" style={{backgroundColor: '#FDF2E9'}}>
           <Col md={12}>
             <h2 className="text-center text-oranye mt-4">Masak Bahan Yang Kamu Punya</h2>
           </Col>
@@ -436,7 +436,7 @@ const HalamanSebelumLogin = () => {
             </Col>
           </Row>
           <Row>
-            <Col md={12}>
+            <Col className="m-auto" md={2}>
               <Paginasi/>
             </Col>
           </Row>
